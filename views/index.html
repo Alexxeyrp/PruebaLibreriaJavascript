@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto web de MasterD." />
+    <meta name="author" content="Alexis Ramirez" />
+
+    <title>CODE TECH</title>
+    <!-- LIBRERIA BOOSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- LIBRERIA ICONOS BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container-fluid">
+          <a
+            class="ms-3 navbar-brand d-flex align-items-center"
+            href="#"
+            style="cursor: default; pointer-events: none"
+          >
+            <img
+              src="/img/LOGOG.svg"
+              alt="logo de la empresa"
+              width="30"
+              height="24"
+            />
+            <h5 class="display mb-0 ms-2 fw-bold">CODET TECH</h5>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="ms-auto me-3 navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link button type1 active"
+                  aria-current="page"
+                  href="index.html"
+                >
+                  <span class="btn-txt">Inicio</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link button type1" href="galeria.html">
+                  <span class="btn-txt">Galeria</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link button type1" href="presupuesto.html">
+                  <span class="btn-txt">Presupuesto</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link button type1" href="contacto.html">
+                  <span class="btn-txt">Contacto</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- INICIO -->
+      <div class="container-fluid p-0">
+        <div class="scrollSeccion">
+          <div class="container">
+            <div class="row vh-100">
+              <div
+                class="col-lg-6 col-sm-6 d-flex justify-content-center align-items-center flex-column p-0"
+              >
+                <h1 class="display-1 fw-light text-center tracking-in-expand">
+                  <span style="color: #853cef">CODE</span>
+                  <span style="font-weight: 700">TECH</span>
+                </h1>
+                <p class="mx-4 text-center fw-light">
+                  Diseñamos y desarrollamos sitios a medida que transmiten la
+                  esencia de tu proyecto y lo hacen destacar en un entorno
+                  digital.
+                </p>
+                <a
+                  href="contacto.html"
+                  class="buttonContact text-decoration-none"
+                  >Contacto</a
+                >
+              </div>
+              <div
+                class="col-lg-6 col-sm-6 d-flex justify-content-center align-items-center flex-column p-0"
+              >
+                <img
+                  src="/img/logos.svg"
+                  class="img-fluid bounce-in-top"
+                  alt="SVG decorativo"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NOTICIAS -->
+      <section id="noticias-section" class="d-flex flex-column bg-light">
+        <h2 class="display-3 fw-bold text-center">Últimas Noticias</h2>
+        <div
+          id="noticias"
+          class="row g-4 justify-content-center p-4 flex-grow-1"
+        ></div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-light text-center p-3 mt-5">
+      <div class="row">
+        <div class="col-12">
+          <ul class="">
+            <li class="d-flex justify-content-center gap-3">
+              <a href="https://facebook.com" target="_blank" class="text-dark">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" class="text-dark">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://github.com" target="_blank" class="text-dark">
+                <i class="bi bi-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>© 2025 Copyright 2025: CodeTech <br />Madrid - España</p>
+        </div>
+      </div>
+    </footer>
+    <!-- SCRIPT BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
