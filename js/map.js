@@ -8,7 +8,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 L.marker([40.3491648, -3.5290726])
   .addTo(map)
   .bindPopup(
-    "Company<br> Calle Ana Maria Matute 18, rivas-vaciamadrid 28522<br>Tel: 632102853"
+    "CODE TECH<br> Calle Ana Maria Matute 18, rivas-vaciamadrid 28522<br>Tel: 632102853"
   )
   .openPopup();
 
