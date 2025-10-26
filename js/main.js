@@ -1,5 +1,6 @@
+const proxy = "https://api.allorigins.win/raw?url=";
 const key = "30c25b8a3dbf4e1891380ae982e729ec";
-const url = `https://newsapi.org/v2/everything?q=developers&apiKey=${key}`;
+const url = `${proxy}https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`;
 
 const mostrar_noticias = document.getElementById("noticias");
 
