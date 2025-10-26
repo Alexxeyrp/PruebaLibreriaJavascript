@@ -1,7 +1,3 @@
-const proxy = "https://api.allorigins.win/raw?url=";
-const key = "30c25b8a3dbf4e1891380ae982e729ec";
-const url = `${proxy}https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`;
-
 const mostrar_noticias = document.getElementById("noticias");
 
 async function cargarNoticias() {
@@ -11,9 +7,10 @@ async function cargarNoticias() {
       <p class="text-center text-muted fs-5">Cargando noticias...</p>
     `;
 
-    const res = await fetch(url);
+    const res = await fetch(
+      "https://api.spaceflightnewsapi.net/v4/articles/?limit=8"
+    );
 
-    // Si la respuesta no es exitosa, lanza un error
     if (!res.ok) {
       throw new Error(`Error HTTP: ${res.status}`);
     }
@@ -21,26 +18,25 @@ async function cargarNoticias() {
     const data = await res.json();
 
     // Validación: si no hay artículos
-    if (!data.articles || data.articles.length === 0) {
+    if (!data.results || data.results.length === 0) {
       mostrar_noticias.innerHTML = `
         <p class="text-center text-danger fs-6">No hay noticias disponibles en este momento.</p>
       `;
       return;
     }
 
-    // Solo mostrar 8 noticias
-    const noticias = data.articles.slice(0, 8);
+    const noticias = data.results.slice(0, 8);
     mostrar_noticias.innerHTML = ""; // limpia el mensaje de carga
 
     noticias.forEach((noticia) => {
       const div = document.createElement("div");
-      div.classList.add("col-lg-3", "col-md-4", "col-sm-6");
+      div.classList.add("col-lg-3", "col-md-4", "col-sm-6", "mb-4");
 
       div.innerHTML = `
         <div class="card shadow-sm h-100">
           <img
             src="${
-              noticia.urlToImage ||
+              noticia.image_url ||
               "https://via.placeholder.com/400x200?text=Sin+Imagen"
             }"
             class="card-img-top"
@@ -52,8 +48,8 @@ async function cargarNoticias() {
             </h5>
             <p class="card-text">
               ${
-                noticia.description
-                  ? noticia.description.slice(0, 100) + "..."
+                noticia.summary
+                  ? noticia.summary.slice(0, 100) + "..."
                   : "Sin descripción disponible"
               }
             </p>
@@ -79,4 +75,4 @@ async function cargarNoticias() {
 }
 
 // Ejecutar al cargar la página
-cargarNoticias();
+document.addEventListener("DOMContentLoaded", cargarNoticias);
