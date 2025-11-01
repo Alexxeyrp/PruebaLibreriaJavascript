@@ -271,3 +271,23 @@ form {
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.texto-justificado {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.mask-container {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Mantiene proporción cuadrada */
+  mask-image: url("./assets/img/forma_quienes_somos.svg");
+  -webkit-mask-image: url("../assets/img/forma_quienes_somos.svg");
+  overflow: hidden;
+}
+
+.mask-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
